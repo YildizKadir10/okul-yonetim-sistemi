@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Öğrenci Düzenle - Okul Yönetim Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Okul Yönetim Sistemi</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="/ogrenciler">Öğrenciler</a>
+                <a class="nav-link" href="/ogretmenler">Öğretmenler</a>
+                <a class="nav-link" href="/siniflar">Sınıflar</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Öğrenci Düzenle</h3>
+                    </div>
+                    <div class="card-body">
+                        <form th:action="@{/ogrenciler/kaydet}" method="post" th:object="${student}">
+                            <input type="hidden" th:field="*{id}">
+                            <input type="hidden" th:field="*{studentNumber}">
+                            
+                            <div class="mb-3">
+                                <label for="studentNumber" class="form-label">Öğrenci No</label>
+                                <input type="text" class="form-control" id="studentNumber" th:field="*{studentNumber}" readonly>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">Ad</label>
+                                <input type="text" class="form-control" id="firstName" th:field="*{firstName}" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Soyad</label>
+                                <input type="text" class="form-control" id="lastName" th:field="*{lastName}" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="parentPhone" class="form-label">Veli Telefon</label>
+                                <input type="tel" class="form-control" id="parentPhone" th:field="*{parentPhone}" 
+                                       placeholder="05XX XXX XX XX" 
+                                       maxlength="11" 
+                                       pattern="^0[0-9]{10}$" 
+                                       required>
+                                <div class="form-text">Örnek: 05XX XXX XX XX (0 ile başlamalı ve 11 haneli olmalıdır)</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="grade" class="form-label">Sınıf</label>
+                                <select class="form-select" id="grade" th:field="*{grade}" required>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="section" class="form-label">Şube</label>
+                                <select class="form-select" id="section" th:field="*{section}" required>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </div>
+                            
+                            <div class="text-end">
+                                <a href="/ogrenciler" class="btn btn-secondary">İptal</a>
+                                <button type="submit" class="btn btn-primary">Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
