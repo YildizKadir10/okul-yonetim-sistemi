@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7725cc05-289d-45cc-b2e0-c5b06363a100)# 🏫 Okul Yönetim Sistemi
+# 🏫 Okul Yönetim Sistemi
 
 ## 📝 Proje Açıklaması
 Bu proje, Spring Boot tabanlı bir okul yönetim sistemidir. Öğrenci 🧑‍🎓, öğretmen 🧑‍🏫 ve sınıf 📚 bilgilerini yönetmek için temel CRUD (Oluşturma, Okuma, Güncelleme, Silme) işlemleri sunar. Uygulama, kullanıcı dostu arayüzler ve otomatik alan atamaları ile yönetim süreçlerini kolaylaştırmayı hedefler.
