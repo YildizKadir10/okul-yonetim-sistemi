@@ -54,7 +54,7 @@ Proje, standart bir Spring Boot katmanlı mimarisiyle tasarlanmıştır:
     Uygulama varsayılan olarak `http://localhost:8080` adresinde çalışacaktır. 🚀
 
 ## 🌐 Deploy Durumu
-Proje henüz bir deploy ortamına yüklenmemiştir sebebi railway sunucularındaki arızalardan dolayı deploy edilmiyor geçici süreliğine. Deploy edildiğinde domain adresi buraya eklenecektir. ⏳
+https://okul-yonetim-sistemi-production-d868.up.railway.app/  ⏳
 
 ## 🔗 GitHub Repo
 Bu projenin kaynak kodlarına aşağıdaki GitHub adresinden ulaşabilirsiniz:
